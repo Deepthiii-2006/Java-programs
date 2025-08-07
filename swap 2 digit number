@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class SwapTwoDigits{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        scanner.close();
+        String numStr = Integer.toString(num);
+        if (numStr.length() < 2){
+            System.out.println("STDOUT");
+        }
+        else{
+        char first = numStr.charAt(0);
+        char second = numStr.charAt(1);
+        System.out.println("" + second + first);
+       }}}
