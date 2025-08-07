@@ -3,11 +3,13 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-public class SwapTwoDigits{
+
+      public class SwapTwoDigits{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
         String numStr = Integer.toString(num);
+        int numAgain = Integer.parseInt(numStr);
         if (numStr.length() < 2){
             System.out.println("STDOUT");
         }
