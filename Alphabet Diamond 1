@@ -4,30 +4,31 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-
 public class AlphabetDiamond {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        Scanner ch = new Scanner(System.in);
+        int n = ch.nextInt();
         for (int i = 1; i <= n; i++) {
-            for (int s = 1; s <= n - i; s++) {
+            for (int k = 1; k <= n - i; k++) {
                 System.out.print(" ");
             }
-            char ch = 'A';
+            char a = 'A';
             for (int j = 1; j <= i; j++) {
-                System.out.print(ch + " ");
-                ch++;
+                System.out.print(a);
+                a++;
+                if (j != i) System.out.print(" ");
             }
             System.out.println();
         }
         for (int i = n - 1; i >= 1; i--) {
-              for (int s = 1; s <= n - i; s++) {
+            for (int k = 1; k <= n - i; k++) {
                 System.out.print(" ");
             }
-            char ch = 'A';
+            char a = 'A';
             for (int j = 1; j <= i; j++) {
-                System.out.print(ch + " ");
-                ch++;
+                System.out.print(a);
+                a++;
+                if (j != i) System.out.print(" ");
             }
             System.out.println();
         }
