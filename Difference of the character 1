@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class CharacterDifference {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        int starCount = 0;
+        int hashCount = 0;
+        for (char ch : input.toCharArray()) {
+            if (ch == '*') starCount++;
+            else if (ch == '#') hashCount++;
+        }
+        int difference = starCount - hashCount;
+        if (difference == 0) {
+            System.out.println("0");
+        } else {
+            String formatted;
+            if (Math.abs(difference) < 10) {
+                formatted = String.format("%02d", Math.abs(difference));
+            } else if (Math.abs(difference) < 100) {
+                formatted = String.format("%03d", Math.abs(difference));
+            } else {
+                formatted = String.valueOf(Math.abs(difference));
+            }
+
+            System.out.println("The Difference of the character in the given string: " + formatted);
+        }
+    }
+}
