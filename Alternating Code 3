@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class AlternatingCodeChecker {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String code = sc.nextLine();
+
+        if (isAlternating(code)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+    public static boolean isAlternating(String s) {
+        if (s.length() < 2) return false;
+        char first = s.charAt(0);
+        char second = s.charAt(1);
+        if (first == second) return false;
+        for (int i = 0; i < s.length(); i++) {
+            char expected = (i % 2 == 0) ? first : second;
+            if (s.charAt(i) != expected) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
